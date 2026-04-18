@@ -9,9 +9,11 @@ app.use(express.json());
 
 const PORT = 3000;
 
-mongoose.connect('YOUR_MONGO_URI_HERE')
-  .then(() => console.log('MongoDB connected'))
-  .catch(err => console.log(err));
+mongoose.connect(
+  'mongodb+srv://numforprecious7_db_user:KgrUxC%214%25VCiqw5@cluster0.sp4mcbh.mongodb.net/?appName=Cluster0'
+)
+.then(() => console.log('MongoDB connected'))
+.catch(err => console.log(err));
 
 const Profile = require('./models/Profile');
 const { v4: uuidv4 } = require('uuid');
